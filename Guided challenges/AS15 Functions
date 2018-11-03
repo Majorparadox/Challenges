@@ -1,0 +1,19 @@
+print ("1. \n")
+
+def addup(one,two,three,four,five):
+    return one+two+three+four+five
+
+print(addup(1,2,3,4,5))
+
+print ("2. \n")
+#Yes
+print ("3. \n")
+#Yes
+print ("4. \n")
+#Yes
+
+def lol(wat):
+    global iterator
+    iterator=4
+
+print(iterator)
