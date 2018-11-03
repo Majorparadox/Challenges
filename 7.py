@@ -150,4 +150,4 @@ if Replay == 1:
 elif Replay == 0:
     print("Done")
 else:
-    print("Error, please enter 1 or 0")
+    print("Error, please enter 1 or 0") #still waiting on the second half of this
