@@ -1,0 +1,17 @@
+import re
+
+x = int(input("How many questions are there? "))
+
+for i in range(x):
+    i+=1
+    i=str(i)
+    temp = ('print("' + i + '"')
+    temp = str(temp)
+    temp = ''.join(temp.split())
+    newline = repr('\n)')
+    yeet = "'"
+    newline = re.sub(yeet, '', newline)
+    final = temp+newline+"\n"
+    print(final)
+
+#I spent more time on this than I would actually just copy-pasting print("1."\n)
