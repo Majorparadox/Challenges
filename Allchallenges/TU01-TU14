@@ -1,0 +1,89 @@
+print("1.\n")
+print (5*5)
+
+print("2.\n")
+MyName = input('Please enter your name: ')
+print("hello", MyName)
+
+print("3.\n")
+ComputerAge=3.45
+ComputerName='Skynet'
+MyAge = int(input('What is your age?'))
+print('I am younger than %d, because I am %.2f My name is %s.' % (MyAge,ComputerAge,ComputerName))
+
+print("4.\n")
+TaylorSwiftBorn = 1989
+MyAge = int(input('When were you born?'))
+AgeDifference = MyAge - TaylorSwiftBorn
+print("Taylor Swift is %d years older than you" % AgeDifference)
+
+print("5.\n")
+test = input("Is it raining? y/n ")
+if test == "y":
+    print("Oh dear, no football today!")
+
+print("6.\n")
+TwinTowers = 452
+MyCityTallestBuilding = int(input("What's the height of your tallest building in metres?"))
+if TwinTowers > MyCityTallestBuilding:
+    print("The KL Twin Towers is taller than your building!")
+
+print("7.\n")
+for i in range (100,0,-1):
+    print(i)
+
+print("8.\n")
+number = 0 #You have to declare this first
+while number < 15 or number > 20 :
+    print("Please enter a number between 15 and 20")
+    number = int(input("enter a number:")
+
+print("9.\n")
+while True:
+    MyNumber = input("Please enter a number: ")
+    try:
+        valid_number = int(MyNumber)
+        break
+    except ValueError:
+        print("Seriously, don't you read the instructions. \nI asked for a number...")
+ 
+print(valid_number)
+
+print("10.\n")
+import random
+Choose_Name = ["James","John","Mark","Rick"]
+for i in range(1,5):
+    chosen = random.choice(Choose_Name)
+    print(chosen)
+    Choose_Name.remove(chosen)
+
+print("11.\n")
+MyTitle = tkinter.Label(window, text="Random Number Generator",font="Helvetica 16 bold")
+MyTitle.pack()
+MyButton = tkinter.Button(window, text="OK", command=RandomNumber) MyButton.pack()
+dice_thrown = tkinter.Label(window, font="Helvetica 16 bold")
+dice_thrown.pack()
+window.mainloop()
+
+print("12.\n")
+MyList = ["Kuala Lumpur","London","Paris","New York","Bangkok"]
+print(MyList[0])
+MyList.append("Beijing")
+MyList.remove("Kuala Lumpur")
+NewCity = input("Please add a city ")
+MyList.append(NewCity) 
+print(MyList)
+
+print("13.\n")
+MyList = [1,2,3,4,5,6]
+print(sum(MyList))
+print(min(MyList))
+print(len(MyList))
+
+print("14.\n")
+MyString = "abcdef" 
+print(MyString)
+print(MyString[3::])
+print(MyString[0:6:2])
+print(MyString[0:-2]) 
+
