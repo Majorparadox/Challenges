@@ -11,7 +11,7 @@ for i in range(x):
     newline = repr('\n")')
     yeet = "'"
     newline = re.sub(yeet, '', newline)
-    final = temp+newline+"\n"
+    final = temp+newline+"\n\n"
     print(final)
 
 
