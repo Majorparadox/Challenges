@@ -1,0 +1,7 @@
+while True:
+    try:
+        float(input("Enter a number: "))
+        break
+    except:
+        print("That's not a number")
+        continue
