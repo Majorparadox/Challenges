@@ -1,0 +1,12 @@
+import random
+
+ranum = random.randint(0, 100)
+while True:
+    guess = int(input("Please guess a random number between 1 and 100"))
+    if guess > ranum:
+        print("Too high!")
+    elif guess < ranum:
+        print("Too low")
+    elif guess == ranum:
+        print("Correct!")
+        break
