@@ -1,0 +1,14 @@
+time = int(input("What is the current time: "))
+am = input("Is it AM or PM")
+newtime = 0
+
+if time == 1200:
+    newtime = "0000"
+    print(newtime)
+
+elif am in ["AM", "am"]:
+    print(time)
+
+elif am in ["PM", "pm"]:
+    newtime = time+1200
+    print(newtime)
