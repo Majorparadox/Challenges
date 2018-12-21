@@ -1,0 +1,35 @@
+import random
+
+def prisonerA():
+    choiceA = input("So, do you choose to confess(A) or stay silent(B):")
+    if choiceA in ["a", "A"]:
+        choiceA = "confess"
+        return choiceA
+    else:
+        choiceA = "stay silent"
+        return choiceA
+    
+def prisonerB():
+    choiceB = random.randint(1,2)
+    if(choiceB == 1):
+        choiceB = "confess"
+    elif (choiceB == 2):
+        choiceB = "stay silent"
+    return choiceB
+
+def Sentence(userchoice, computerchoice):
+    if userchoice == "confess" and computerchoice == "confess":
+        print("You will now serve 5 years.")
+    elif userchoice == "stay silent" and computerchoice == "stay silent":
+        print("You will now serve 1 years.")
+    elif userchoice == "confess" and computerchoice == "stay silent":
+        print("Congratulations, you are now released.")
+    elif userchoice == "stay silent" and computerchoice == "confess":
+        print("You will now serve 20 years.")
+
+while True:
+    computerchoice = prisonerB()
+    userchoice = prisonerA()
+    print("You chose to: ", userchoice)
+    print("The computer chose to: ", computerchoice)
+    Sentence(userchoice, computerchoice)
