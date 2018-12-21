@@ -1,0 +1,11 @@
+print("Variable")
+newVariable = "Hello World!"
+
+print("Selection")
+if newVariable in ["a", "b", "c"]:
+    print("Do Something")
+
+print("Reperition")
+for i in range(50):
+    print("Do this", i, "times")
+
