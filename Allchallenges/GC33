@@ -1,0 +1,13 @@
+totalCals = 0
+goal = 2000
+
+while True:
+    foodeaten = input("Please enter the name of a food you have eaten today:")
+    cal = int(input("How many calories did that food contain: "))
+    goal-=cal
+    print("You need to eat ", goal, "more calories today")
+    redo = input("Type 'end day' to close the program: ")
+    if redo == "end day":
+        break
+    else:
+        continue
