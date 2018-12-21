@@ -1,0 +1,12 @@
+correct = 0
+while True:
+    if correct == 2:
+        break
+    attempt = input("Please enter the following: 'she sells seashells on the sea shore':")
+    if attempt == "she sells seashells on the sea shore":
+        print("Correct, please verify once more.")
+        correct += 1
+    else:
+        print("That is not correct, please try again")
+        continue
+print("Access Granted")
