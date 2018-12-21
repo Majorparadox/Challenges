@@ -1,0 +1,16 @@
+def withdraw(balance):
+    while True:
+        print("Your current balance is:", balance)
+        amountwithdraw = int(input("How much money would you like to withdraw? (This machine only withdraws in increments of 5):"))
+        if (amountwithdraw < (balance - 0.5)) and (amountwithdraw % 5 == 0):
+            return amountwithdraw
+            break
+
+def newbalance(balance, withdrawalAmount):
+    balance -= (withdrawalAmount + 0.5)
+    return balance
+
+balance = 27
+withdrawalAmount = withdraw(balance)
+truenew = newbalance(balance, withdrawalAmount)
+print("Your new bank balance is:", truenew)
