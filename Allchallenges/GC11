@@ -1,0 +1,9 @@
+def adviceheight(length):
+    height = 0
+    goldenRatio = 1.61803398874989484820
+    height = float(length)/goldenRatio
+    return height
+
+length = input("What is the length of the painting you are creating?")
+height = adviceheight(length)
+print("I advice your painting to be: ", format(height, '.2f'))
