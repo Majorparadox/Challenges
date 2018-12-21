@@ -1,0 +1,11 @@
+import random
+
+while True:
+    firstnum = random.randint(1, 12)
+    secondnum = random.randint(1, 12)
+    answer = firstnum * secondnum
+    userAnswer = int(input("What is ", str(firstnum), " x ", str(secondnum) "?:"))
+    if(userAnswer == answer):
+        print("Correct")
+    else:
+        print("Incorrect")
