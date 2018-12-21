@@ -1,0 +1,18 @@
+def order(payement):
+    print("You currently have payed:", payement)
+    water = int(input("How many bottles of water do you want? (0.4$ each):"))
+    chocolate = int(input("How many Pieces of chocolate do you want? (1.20$ each):"))
+    gum = int(input("How pieces of gum do you want? (0.5$ each):"))
+    softdrink = int(input("How many cans of soft drink do you want (0.5$ each):"))
+    total = (water * 0.4) + (chocolate * 1) + (gum * 0.5) + (softdrink * 0.7)
+    if(total > payement):
+        print("Insufficient Funds")
+        total = 0
+        return total
+    return total
+
+payement = float(input("How much cash are you putting into the machine?"))
+total = order(payement)
+print("Your total costs is: ", total)
+change = payement - total
+print("Your change is:", change)
