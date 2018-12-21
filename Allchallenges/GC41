@@ -1,0 +1,6 @@
+num = int(input("Please insert a whole number:"))
+
+if(num % 3 == 0):
+    print("Number can be divided by 3.")
+else:
+    print("Number cannot be divided by 3.")
