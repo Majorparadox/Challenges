@@ -1,0 +1,5 @@
+age = int(input("How old are you: "))
+percentage = int(input("What percentage of your maximum heartrate do you want to work at"))
+maxHeartRate = 225 - age
+runningHeartRate = (maxHeartRate/100) * percentage
+print("you should not have a heartrate higher than ", str(round(runningHeartRate)), "BPM.")
