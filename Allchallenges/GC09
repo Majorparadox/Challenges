@@ -1,0 +1,8 @@
+increment = 99
+while True:
+    if increment > 0:
+        print (increment, "bottles of cola on the wall.", increment, "bottles of cola, take one down, pass it around,")
+        increment -= 1
+    else:
+        print("No more bottles of cola on the wall!")
+        break
