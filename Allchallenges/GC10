@@ -1,0 +1,10 @@
+one = 0
+two = 1
+
+count = 0
+while count < 100:
+    print(one, ",")
+    new = one + two
+    one = two
+    two = new
+    count += 1
