@@ -1,0 +1,35 @@
+player1score = 0
+player2score = 0
+
+
+for i in range(5):
+    player1question= input("What is your question for player 2: ")
+    player1answer = input("What is the answer to your question: ")
+    print(player1question)
+    guess2 = input("Enter the answer to player 1's question: ")
+    if guess2 == player1answer:
+        print("Correct, you earn 1 point")
+        player2score+= 1
+    else:
+        print("Incorrect")
+
+    player2question = input("What is your question for player 2: ")
+    player2answer = input("What is the answer to your question: ")
+    print(player2question)
+    guess1 = input("Enter the answer to player 1's question: ")
+    if guess1 == player1answer:
+        print("Correct, you earn 1 point")
+        player1score += 1
+    else:
+        print("Incorrect")
+
+    if i == 5:
+        print("Good game, here are the scores: ")
+        print("Player 1: ", player1score)
+        print("Player 2: ", player2score)
+        if player1score > player2score:
+            print("Player 1 wins")
+        else:
+            print("Player 2 wins")
+    else:
+        continue
