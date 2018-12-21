@@ -1,0 +1,7 @@
+import random
+commentlist = ["CLEARLY A LOT OF EFFORT WENT INTO THIS", "GREAT JOB, KEEP GOING ", "YOU SUCK GO DIE LOL"]
+studentnum = int(input("How many students are there: "))
+
+for i in range(studentnum):
+    comment = random.choice(commentlist)
+    print("Student number", i+1, "-", comment)
