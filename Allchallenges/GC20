@@ -1,0 +1,7 @@
+timetocharge = 5100
+currentime = 1400
+
+end = timetocharge + currentime
+while end > 2300:
+    end -= 1200
+print(end)
