@@ -1,0 +1,18 @@
+unkown = input("Which value don't you have?('distance', 'speed' or 'time'):")
+if unkown == "speed":
+    distance = float(input("Enter the distance: "))
+    time = float(input("Enter the time: "))
+    speed = distance / time
+    print("The speed is:", speed)
+
+elif unkown == "distance":
+    speed = float(input("Enter the speed?: "))
+    time = float(input("Enter the time?: "))
+    distance = speed * time
+    print("The distance is:", distance)
+
+elif unkown == "time":
+    speed = float(input("Enter the speed? :"))
+    distance = float(input("Enter the distance?: "))
+    time = distance / speed
+    print("The time is:", time)
