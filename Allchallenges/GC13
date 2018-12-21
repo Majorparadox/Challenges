@@ -1,0 +1,41 @@
+ def multBy1(num):
+    result = 0
+    result += int(num)
+    return result
+
+def multBy3(num):
+    result = 0
+    result += (int(num) * 3)
+    return result
+
+def TotalISBN(isbn):
+    total = 0
+    value = 13
+    for num in isbn:
+        if((value % 2) > 0):
+            total += multBy1(num)
+        else:
+            total += multBy3(num)
+        value -= 1
+    return total
+
+def ValidateTotal(totalOfISBN):
+    valid = False
+    if (totalOfISBN % 10) != 0:
+        valid = False
+    else:
+        valid = True
+    return valid
+
+while True:
+    isbn = input("Please insert your ISBN number - it must be 13 digits long:")
+    totalOfISBN = TotalISBN(isbn)
+    valid = ValidateTotal(totalOfISBN)
+    if valid == True:
+        print("Your ISBN number is valid!")
+    else:
+        print("Your ISBN is invalid!")
+    again = input("Would you like to validate another number?:")
+    if again == "no"
+        print("Thanks for using the validator, goodbye.")
+        break
