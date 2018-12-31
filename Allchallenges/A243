@@ -1,0 +1,13 @@
+def readposint(userinput):
+    try:
+        userinput = int(userinput)
+    except ValueError:
+        return ("Make sure the input is an integer")
+    if userinput < 0:
+        return("The integer must be positive")
+    else:
+        return(userinput)
+
+user = input("Please enter a positive integer: ")
+
+print(readposint(user))
