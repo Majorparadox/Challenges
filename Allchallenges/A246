@@ -1,0 +1,17 @@
+import random
+answer = random.randint(1,111)
+print(answer)
+
+floor = 1
+ceiling = 101
+win = 0
+
+while True:
+    guess = int((floor+ceiling)/2)
+    if guess > answer:
+        ceiling = guess
+    elif guess < answer:
+        floor = guess
+    elif guess == answer:
+        print("I guess the answer is: ", guess)
+        break
