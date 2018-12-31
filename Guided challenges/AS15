@@ -1,0 +1,14 @@
+def sum(list):
+
+    result = 0
+    for i in list:
+        result += i
+
+    return result
+
+mylist = [1,2,3,4,5]
+print(sum(mylist))
+
+2.yes
+3.yes
+4.no
