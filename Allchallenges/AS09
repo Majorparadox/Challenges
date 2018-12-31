@@ -1,0 +1,32 @@
+import random
+
+words = ["SCHOOL", "SMALL", "LIONS", "FIGHTING", "HOW", "OBAMACARE", "HOSPITAL", "HELLO", "EASY"]
+
+def likeness(guess ,answer):
+    similar = 0
+    for i in guess:
+        for correct in answer:
+            if i == correct:
+                similar += 1
+    return similar
+
+pick = random.randint(0,8)
+answer = words[pick]
+lives = 5
+print("ENTER THE PASSWORD")
+
+print(words)
+
+while True:
+    guess = input("WHAT IS THE PASSOWRD?")
+
+    if guess != answer:
+        print("wrong")
+        print("likeness = ", likeness(guess, answer))
+        lives-=1
+        if lives <=0:
+            print("You lose")
+            break
+    else:
+        print("You win!")
+        break
