@@ -1,0 +1,16 @@
+"""
+1. 12+3* = (1+2)*3
+
+1 is not an operator so it is pushed to the stack                   stack: 1
+2 is also not an operator so it is pushed to the stack              stack: 2 1
++ is an operator so it does 2+1 and puts the result in the stack   stack: 3
+3 is not an operator so it is pushed to the stack                   stack: 3 3
+* is an operator so it does 3*3 and puts the result in the stack    stack: 9
+12+3 =
+
+2. 1+2*3 = 123+
+1 is an operand so it is output
++ is an operand so it is pushed to the stack                        stack: +
+2 is an operand so it is output
+* is an operand so it is pushed to the stack                        stack: *+
+"""
