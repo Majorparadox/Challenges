@@ -1,0 +1,101 @@
+'''
+TODO: Compile others code and put them under the print("x.\n") system (Comment some of the less obvious parts)
+'''
+
+print("1.\n")
+def distance(p,q):
+    zx = p.x - q.x
+    zy = p.y - q.y
+    r = (zx**2 + zy**2)**0.5
+    return r
+
+print("2.\n")
+
+class Point:
+    """ Point class represents and manipulates x,y coords. """
+
+    def __init__(self, x=0, y=0):
+        """ Create a new point at the origin """
+        self.x = x
+        self.y = y
+
+    def __str__(self):    # All we have done is renamed the method
+        return "({0}, {1})".format(self.x, self.y)
+
+    def reflect_x(self):
+        return Point(self.x, -self.y)
+
+print(Point(3, 5).reflect_x())
+
+print("3.\n")
+
+class Point:
+    """ Point class represents and manipulates x,y coords. """
+
+    def __init__(self, x=0, y=0):
+        """ Create a new point at the origin """
+        self.x = x
+        self.y = y
+
+    def __str__(self):    # All we have done is renamed the method
+        return "({0}, {1})".format(self.x, self.y)
+
+    def slope_from_origin(self):
+        if self.x == 0:
+            slope = "infinite"
+        else:
+            slope = self.y / self.x
+        return slope
+print(Point(3, 10).slope_from_origin())
+
+print("4.\n")
+class Point:
+    """ Point class represents and manipulates x,y coords. """
+
+    def __init__(self, x=0, y=0):
+        """ Create a new point at the origin """
+        self.x = x
+        self.y = y
+
+    def __str__(self):    # All we have done is renamed the method
+        return "({0}, {1})".format(self.x, self.y)
+
+    def get_line_to(newline,self):
+        if self.x-newline.x == 0:
+            return "infinite"
+        else:
+            m = (self.y - newline.y)/(self.x-newline.x)
+            c = self.y - m*self.x
+            return [m,c]
+print(Point(4, 11).get_line_to(Point(6, 15)))
+
+
+print("5.\n")
+print("WUT")
+
+print("6.\n")
+
+class SMS_store():
+    def __init__(self):
+        """Create an place to store messages"""
+        self.smsmessages = []
+
+    def add_new_arrival(self,from_number, time_arrived, text_of_SMS):
+        # Makes new SMS tuple, inserts it after other messages
+        self.smsmessages.append([False, from_number, time_arrived, text_of_SMS])
+
+    def message_count(self):
+        # Returns the number of sms messages in my_inbox
+        return len(self.smsmessages)
+
+    def get_unread_indexes(self):
+        # Returns list of indexes of all not-yet-viewed SMS messages
+        unreadcount = []
+        print("???")
+        return unreadcount
+
+    def delete(self,i):
+        self.smsmessages.remove[i]
+
+    def clear(self):
+        self.messages = []
