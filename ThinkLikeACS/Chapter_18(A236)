@@ -1,0 +1,111 @@
+import turtle
+import os
+
+
+print("3-4.\n")
+def triangle(t,order,size,color=-1,first = False):
+    global current
+    t.penup()
+    colors = ['red','blue','green']
+    if first:
+        current = 0
+        t.color(colors[current])
+    for i in range(3):
+        if order == 0:
+            t.pendown()
+            t.forward(size)
+            t.left(120)
+            t.penup()
+        else:
+            if color == 0:
+                current += 1
+                if current > 2:
+                    current = 0
+                t.color(colors[current])
+            triangle(t,order-1,size/2,color-1)
+            t.forward(size)
+            t.left(120)
+
+
+print("5\n")
+def recursive_min(xs):
+    minx = None
+    first = True
+    for i in xs:
+        if type(i) == type([]):
+            val = recursive_min(i)
+        else:
+            val = i
+
+        if first or val < minx:
+            minx = val
+            first = False
+    return minx
+
+print("6.\n")
+def count(target, xs):
+    counter = 0
+    for i in xs:
+        if type(i) == type([]):
+            counter += count(target,i)
+        else:
+            if i == target:
+                counter += 1
+    return counter
+
+
+print("7.\n")
+def flatten(xs):
+    flat = []
+    for i in xs:
+        if type(i) == type([]):
+            add = flatten(i)
+            for j in add:
+                flat.append(j)
+        else:
+            flat.append(i)
+    return flat
+
+print("8.\n")
+def fibonacci(order):
+    x = 1
+    y = 0
+    for i in range(order):
+        if i%2 == 0:
+            x += y
+            print(x)
+        else:
+            y += x
+            print(y)
+
+print("9.\n")
+#todo
+
+print("10.\n")
+def print_filesedit(path, prefix = ""):
+    """ Print recursive listing of contents of path """
+    if prefix == "":  # Detect outermost call, print a heading
+        print("Folder listing for", path)
+        prefix = "| "
+    dirlist = os.listdir(path)
+    dirlist.sort()
+    return dirlist
+    for f in dirlist:
+        fullname = os.path.join(path, f)   # Turn name into full pathname
+        if os.path.isdir(fullname):        # If a directory, recurse.
+            print_filesedit(fullname,prefix+fullname)
+        else:
+            print(fullname)
+
+print("11.\n")
+def litter(path, prefix = ""):
+    """ Print recursive listing of contents of path """
+    if prefix == "":  # Detect outermost call, print a heading
+        print("Folder listing for", path)
+        prefix = "| "
+    dirlist = get_dirlist(path)
+    for f in dirlist:
+        fullname = os.path.join(path, f)   # Turn name into full pathname
+        if os.path.isdir(fullname):        # If a directory, recurse.
+            print(fullname)
+            litter(fullname,prefix+fullname)
