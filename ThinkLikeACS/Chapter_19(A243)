@@ -1,0 +1,12 @@
+def readposint():
+    try:
+        posint = int(input("Positive int: "))
+        if posint < 0:
+            print("Not positive")
+            posint = readposint()
+    except ValueError:
+        print("Please enter an integer")
+        posint = readposint()
+    return posint
+
+print(readposint())
