@@ -1,0 +1,76 @@
+print("1.\n")
+
+class Rectangle:
+    """ A class to manufacture rectangle objects """
+
+    def __init__(self, posn, w, h):
+        """ Initialize rectangle at posn, with width w, height h """
+        self.corner = posn
+        self.width = w
+        self.height = h
+
+    def __str__(self):
+        return  "({0}, {1}, {2})".format(self.corner, self.width, self.height)
+
+    def area(self):
+        totalarea = self.width * self.height
+        return totalarea
+print(Rectangle(3,20,10).area())
+
+print("2.\n")
+class Rectangle:
+    """ A class to manufacture rectangle objects """
+
+    def __init__(self, posn, w, h):
+        """ Initialize rectangle at posn, with width w, height h """
+        self.corner = posn
+        self.width = w
+        self.height = h
+
+    def __str__(self):
+        return  "({0}, {1}, {2})".format(self.corner, self.width, self.height)
+
+    def perimeter(self):
+        perm = 2 * (self.height+self.width)
+        return perm
+print(Rectangle(3,10,50).perimeter())
+
+
+print("3.\n")
+class Rectangle:
+    """ A class to manufacture rectangle objects """
+
+    def __init__(self, posn, w, h):
+        """ Initialize rectangle at posn, with width w, height h """
+        self.corner = posn
+        self.width = w
+        self.height = h
+
+    def __str__(self):
+        return  "({0}, {1}, {2})".format(self.corner, self.width, self.height)
+
+    def flip(self):
+        x = ""
+        y = ""
+        x = self.width
+        y = self.height
+        self.width = y
+        self.height = x
+        return self.width,self.height
+print(Rectangle(3,10,50).flip())
+
+print("4.\n")
+class Rectangle:
+    """ A class to manufacture rectangle objects """
+
+    def __init__(self, posn, w, h):
+        """ Initialize rectangle at posn, with width w, height h """
+        self.corner = posn
+        self.width = w
+        self.height = h
+
+    def __str__(self):
+        return  "({0}, {1}, {2})".format(self.corner, self.width, self.height)
+
+
+print(Rectangle(3,10,50).in_rectangle(10,20))
