@@ -1,0 +1,30 @@
+print("1.\n")
+letters = {'a':0,'b':0,'c':0,'d':0,'e':0,'f':0,'g':0,'h':0,'i':0,'j':0,'k':0,'l':0,'m':0,'n':0,'o':0,'p':0,'q':0,'r':0,'s':0,'t':0,'u':0,'v':0,'w':0,'x':0,'y':0,'z':0}
+thisstring = str(input("Enter string: "))
+
+for char in list(thisstring):
+    if char.lower in letters:
+        letters[char] += 1
+
+for i in letters.keys():
+    if letters[i] != 0:
+        print(i, letters[i])
+
+word_list = []
+word_count = {}
+
+for word in word_list:
+    if word in word_count:
+        word_count[word] += 1
+    else:
+        word_count[word] = 0
+
+for i in word_count.keys():
+    if word_count[i] != 0:
+        print(i, word_count[i])
+
+print("2.\n")
+print("a: 35 \n b: 4 \n c: True \n d: KeyError: 'pears' \n e: 0 \n f. ['apples', 'bananas', 'grapes', 'oranges'] \n g. False ")
+
+print("3.\n")
+"Ask on tuesday"
