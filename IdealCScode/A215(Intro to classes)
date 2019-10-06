@@ -1,0 +1,135 @@
+print("1.\n")
+def distance(p,q):
+    zx = p.x - q.x
+    zy = p.y - q.y
+    r = (zx**2 + zy**2)**0.5
+    return r
+
+#Takes in 2 points on an x-y graph and computes the  distance between them
+
+print("2.\n")
+class Point:
+    """ Point class represents and manipulates x,y coords. """
+    def __init__(self, x=0, y=0):
+        """ Create a new point at the origin """
+        self.x = x
+        self.y = y
+    def __str__(self):
+        return "({0}, {1})".format(self.x, self.y)
+
+    def reflect_x(self):
+        return Point(self.x, -self.y)
+
+print(Point(3, 5).reflect_x())
+
+#Reflects a point by the x axis by keeping the x value the same and making the y value negative
+
+print("3.\n")
+class Point:
+    """ Point class represents and manipulates x,y coords. """
+
+    def __init__(self, x=0, y=0):
+        """ Create a new point at the origin """
+        self.x = x
+        self.y = y
+
+    def __str__(self):    # All we have done is renamed the method
+        return "({0}, {1})".format(self.x, self.y)
+
+    def slope_from_origin(self):
+        if self.x == 0:
+            slope = "infinite"
+        else:
+            slope = self.y / self.x
+        return slope
+print(Point(3, 10).slope_from_origin())
+
+#Finds the slope of a line that goes through a set of points and the origin (0,0) by using y2-yy / x2-x1
+
+print("4.\n")
+class Point:
+    """ Point class represents and manipulates x,y coords. """
+
+    def __init__(self, x=0, y=0):
+        """ Create a new point at the origin """
+        self.x = x
+        self.y = y
+
+    def __str__(self):    # All we have done is renamed the method
+        return "({0}, {1})".format(self.x, self.y)
+
+    def get_line_to(newline,self):
+        if self.x-newline.x == 0:
+            return "infinite"
+        else:
+            m = (self.y - newline.y)/(self.x-newline.x)
+            c = self.y - m*self.x
+            return [m,c]
+print(Point(4, 11).get_line_to(Point(6, 15)))
+
+#Makes the equation y=mx+b given 2 points on a line
+
+print("5.\n")
+class Point:
+    """ Create a new Point, at coordinates x, y """
+
+    def __init__(self, x=0, y=0):
+        """ Create a new point at x, y """
+        self.x1 = x
+        self.y1 = y
+
+    def getab(self, a):
+        gradient = (a.y1 - self.y1)/(a.x1-self.x1)
+        c = a.y1 - (gradient * a.x1)
+        return (gradient,c)
+
+print(Point(4,10).getab(Point(6,15)))
+
+#Finds the mid point of a circle given 4 points on the circle by calculating the gradient of each of the points and halving the distance between them
+# If any two points have the same x or y coordinate then this function will fail because you can't divide by 0
+
+
+print("6.\n")
+class SMS_store():
+    class SMS:
+        #Makes new SMS tuple, inserts it after other messages
+        def __init__(my_inbox):
+            my_inbox.hasbeenviewed = []
+            my_inbox.from_number = []
+            my_inbox.time_arrived = []
+            my_inbox.text_of_sms = []
+
+        def add_new_arrival(my_inbox, from_number, time_arrived, text_of_SMS):
+            my_inbox.from_number.append(from_number)
+            # has_been_viewed status is set False.
+            my_inbox.hasbeenviewed.append(False)
+            my_inbox.time_arrived.append(time_arrived)
+            my_inbox.text_of_sms.append(text_of_SMS)
+
+        #Returns the number of sms messages in my_inbox
+        def message_count(my_inbox):
+            return len(my_inbox.hasbeenviewed)
+
+        #Returns list of indexes of all not-yet-viewed SMS messages
+        def get_unread_indexes(my_inbox):
+            newList = []
+            for i in range(len(my_inbox.hasbeenviewed)):
+                w = my_inbox.hasbeenviewed[i]
+                if w == False:
+                    newList.append(i)
+            return newList
+
+        #Returns (from_number, time_arrived, text_of_sms) for message[i]
+        def get_message(my_inbox, i):
+            try:
+                w = my_inbox.from_number[i]
+                x = my_inbox.time_arrived[i]
+                y = my_inbox.text_of_sms[i]
+                del my_inbox.hasbeenviewed[i]
+                #changes has_been_viewed status to True.
+                my_inbox.hasbeenviewed.insert(i, True)
+                tuple = (w, x, y)
+                return tuple
+            except:
+                #If there is no message at position i, returns None
+                return None
